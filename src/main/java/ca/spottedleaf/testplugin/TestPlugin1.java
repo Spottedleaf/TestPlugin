@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Locale;
 import java.util.UUID;
 
-public class TestPlugin extends JavaPlugin implements Listener {
+public class TestPlugin1 extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
@@ -38,7 +38,7 @@ public class TestPlugin extends JavaPlugin implements Listener {
             final String[] args = message.split(" ");
 
             if (args.length < 3) {
-                player.sendMessage("<add/remove/query> <x> <z>");
+                player.sendMessage("<add1/remove1/query1> <x> <z>");
                 return;
             }
 
@@ -46,15 +46,15 @@ public class TestPlugin extends JavaPlugin implements Listener {
             final int z = Integer.parseInt(args[2]);
 
             switch (args[0].toLowerCase(Locale.ENGLISH)) {
-                case "add":
+                case "add1":
                     world.addPluginTicket(x, z, this);
                     player.sendMessage("Added to " + x + ", " + z);
                     break;
-                case "remove":
+                case "remove1":
                     world.removePluginTicket(x, z, this);
                     player.sendMessage("Removed from " + x + ", " + z);
                     break;
-                case "query":
+                case "query1":
                     Collection<Plugin> tickets = world.queryPluginTickets(x, z);
 
                     StringBuilder builder = new StringBuilder();

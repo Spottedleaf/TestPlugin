@@ -1,4 +1,4 @@
-name: TestPlugin
+name: TestPlugin1
 version: 1.0.0
-main: ca.spottedleaf.testplugin.TestPlugin
+main: ca.spottedleaf.testplugin.TestPlugin1
 api-version: 1.14
